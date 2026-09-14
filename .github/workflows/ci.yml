@@ -28,5 +28,8 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      - name: Executar testes unitários
+        run: npm test
+
       - name: Gerar build
         run: npm run build

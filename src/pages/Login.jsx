@@ -36,21 +36,23 @@ export default function Login() {
   return (
     <Layout title="Login">
       <form onSubmit={enviar}>
-        <label>E-mail</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+      <label htmlFor="email">E-mail</label>
+<input
+  id="email"
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required
+/>
 
-        <label>Senha</label>
-        <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          required
-        />
+<label htmlFor="senha">Senha</label>
+<input
+  id="senha"
+  type="password"
+  value={senha}
+  onChange={(e) => setSenha(e.target.value)}
+  required
+/>
 
         <button disabled={carregando}>
           {carregando ? "Entrando..." : "Acessar página Principal"}
